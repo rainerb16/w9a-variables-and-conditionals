@@ -13,39 +13,47 @@
 // var is_subscribed = true;
 
 // User is 18 and older and is subscribed
-var userAge = 21;
-var is_subscribed = true;
+// var userAge = 21;
+// var is_subscribed = true;
 
 
-if (userAge < 18 && !is_subscribed) {
-     console.log("This user is younger than 18 and is not subscribed");
-} else if (userAge >= 18 && !is_subscribed) {
-     console.log("This user is 18 or older and is not subscribed");
-} else if (userAge < 18 && is_subscribed) {
-     console.log("This user is younger than 18 and is subscribed");
-} else if (userAge >= 18 && is_subscribed) {
-     console.log("This user is 18 and older and is subscribed");
-} else {
-     console.log("Oops! Something went wrong...");
-}
+// if (userAge < 18 && !is_subscribed) {
+//      console.log("This user is younger than 18 and is not subscribed");
+// } else if (userAge >= 18 && !is_subscribed) {
+//      console.log("This user is 18 or older and is not subscribed");
+// } else if (userAge < 18 && is_subscribed) {
+//      console.log("This user is younger than 18 and is subscribed");
+// } else if (userAge >= 18 && is_subscribed) {
+//      console.log("This user is 18 and older and is subscribed");
+// } else {
+//      console.log("Oops! Something went wrong...");
+// }
 
 
 // W9B: Simple User Array //
 
-// Array of users
-var userAges = [15, 17, 18, 20, 19, 23, 13];
+// Age and Subscription Arrays
+var userAges = [15, 17, 18, 20, 14, 23, 13];
+var is_subscribed = [true, false, true, false, true, false, true];
 
-// Loop iteration of user ages
-for(var ageCounter = 0; ageCounter < userAges.length; ageCounter++) {
-   console.log(userAges[ageCounter]);
+// Loop iteration of Ages
+for(var counter = 0; counter < userAges.length; counter++) {
+     console.log(userAges[counter]);
+
+     if(userAges[counter] < 18 && is_subscribed[counter] != true) {
+          console.log("User is under 18 and not subscribed");
+
+     } else if (userAges[counter] >= 18 && is_subscribed[counter] != true) {
+          console.log("This user is 18 or older and is not subscribed");
+
+     } else if (userAges[counter] < 18 && is_subscribed[counter] == true) {
+          console.log("This user is younger than 18 and is subscribed");
+
+     } else if (userAges[counter] >= 18 && is_subscribed[counter] == true) {
+          console.log("This user is 18 and older and is subscribed");
+
+     } else {
+          console.log("Oops! Something went wrong...");
+          }    
+
 }
-
-// Array of subscription status
-var is_subscribed = ["yes", "no", "yes", "no", "yes", "no", "yes"];
-
-//Loop interation of subscription statuses
-for(var subscriptionStatus = 0; subscriptionStatus < is_subscribed.length; subscriptionStatus++) {
-    console.log(is_subscribed[subscriptionStatus]);
-}
-
-
